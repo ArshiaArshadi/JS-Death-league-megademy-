@@ -1,27 +1,41 @@
 // Count the number of clicks *13*
 
+// select element
+let clickElement = document.getElementById("clickElement")
+let textElement = document.getElementById("textElement")
 // ------------------------------
 
 // select button
 const button =  document.getElementById("btn")
 
 
+// a value for the number of clicks
+let clickCounter = 0
+
 // add event fot check user click
 button.addEventListener("click", countClick)
 
 
-// create element for show text in DOM
-const textElement = document.createElement("H1")
-textElement.id = "textElement"
-document.body.appendChild("textElement")
 
-// create element for show clicks in DOM
-const clickElement = document.createElement("span")
-clickElement.id = "clickElement"
-document.body.appendChild("clickElement")
+// create function for check number of click and show alert
+function countClick(){
+    // Increase the number of clicks with each click
+    ++ clickCounter
+    console.log(clickCounter);
+    // show in DOM with element
+    clickElement.textContent = clickCounter;
+    
 
+    // Show alert set for every 10 clicks
+    if (clickCounter % 10 === 0){
+        
+        textElement.textContent = `تعداد کلیک ها به حد نصاب رسید`
+    }else {
 
-function
+        clickElement.textContent = ""
+
+    }
+}
 
 
 
