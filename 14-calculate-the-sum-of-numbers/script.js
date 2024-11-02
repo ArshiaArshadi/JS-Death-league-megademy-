@@ -18,12 +18,18 @@ submit.addEventListener("click", sumNumber)
 function sumNumber (){
     let inputNumber = input.value;
     
-    // 
+    // Find the number of numbers
     for (let i = 0; i <= inputNumber; i++) {
-      numbers.push(i);
+      
+      // Add to previous list  
+      arrayNumber.push(i);
     }
-    numbers.forEach((element) => {
+
+    // sum array numbers
+    arrayNumber.forEach((element) => {
       sum = sum + element;
     });
-    output.append(`the answer is ${sum}`);
+
+    // show output
+    output.append(`The result of your calculation ${sum}`);
 }
