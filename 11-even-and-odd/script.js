@@ -25,10 +25,12 @@ while (true){
 // Checking whether it is even or odd
 if (numberValue % 2 !== 0 ){
 
+    // Check for odd
     document.body.innerHTML = `Your number is odd`;
     
 }else {
 
+    // Check for even
     document.body.innerHTML = `Your number is even`;
 
 }
